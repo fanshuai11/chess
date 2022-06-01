@@ -1,0 +1,64 @@
+body,html{
+    width: 100%;
+    height: 100%;
+}
+.header{
+    position: relative;
+    width: 400px;
+    top: 10%;
+    left: 20%;
+
+}
+.container{
+    display: inline-flex;
+    flex-direction: column;
+    position: relative;
+    top: 11%;
+    left: 20%;
+    border: 2px solid rgb(140, 132, 132);
+   
+}
+#back{
+    position: absolute;
+    font-size: 20px;
+    right:-70px;
+    top:60px;
+}
+#tips{
+    position: absolute;
+    bottom: -40px;
+    font-size: 20px;
+}
+.row{
+    display: flex;
+    background-color: black;
+}
+.row span {
+    box-sizing: border-box;
+    border:2px solid rgb(140, 132, 132);
+    background-color: rgb(176, 166, 154);
+    width: 40px;
+    height: 40px;
+    position: relative;
+}
+.black{
+    width: 70%;
+    height: 70%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    border-radius: 50%;
+    background: radial-gradient(circle,white,rgb(16, 15, 15),black);
+}
+.white{
+    width: 70%;
+    height: 70%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    border-radius: 50%;
+    background:white;
+}
+
