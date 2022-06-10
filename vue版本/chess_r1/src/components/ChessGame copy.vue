@@ -23,23 +23,7 @@ export default {
   components: { SlideLength, ChessRow },
   data() {
     return {
-      chessData: [
-        [
-          { id: nanoid(), click: 0, color: 0, step: 0 },
-          { id: nanoid(), click: 0, color: 0, step: 0 },
-          { id: nanoid(), click: 0, color: 0, step: 0 },
-        ],
-        [
-          { id: nanoid(), click: 0, color: 0, step: 0 },
-          { id: nanoid(), click: 0, color: 0, step: 0 },
-          { id: nanoid(), click: 0, color: 0, step: 0 },
-        ],
-        [
-          { id: nanoid(), click: 0, color: 0, step: 0 },
-          { id: nanoid(), click: 0, color: 0, step: 0 },
-          { id: nanoid(), click: 0, color: 0, step: 0 },
-        ],
-      ],
+      chessData:[],
       currentColor: 1,
       result: 0,
       slide: 3,
@@ -164,16 +148,19 @@ export default {
         });
       },
     },
-    slide(newSlide) {
-      let newChessData = [];
-      for (let i = 0; i < newSlide; i++) {
-        let rowChessData = [];
-        for (let j = 0; j < newSlide; j++) {
-          rowChessData.push({ id: nanoid(), click: 0, color: 0, step: 0 });
+    slide: {
+      immediate: true,
+      handler(newSlide) {
+        let newChessData = [];
+        for (let i = 0; i < newSlide; i++) {
+          let rowChessData = [];
+          for (let j = 0; j < newSlide; j++) {
+            rowChessData.push({ id: nanoid(), click: 0, color: 0, step: 0 });
+          }
+          newChessData.push(rowChessData);
         }
-        newChessData.push(rowChessData);
-      }
-      this.chessData = newChessData;
+        this.chessData = newChessData;
+      },
     },
   },
   computed: {
