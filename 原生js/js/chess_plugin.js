@@ -51,6 +51,7 @@ class chessPlugin {
                         if (row_index == last[0] && cloumn_index == last[1]) {
                             let chess = cloumn_item.childNodes[0];
                             chess.className = "";
+                            this.tips.innerHTML = "轮到黑棋下";
                         }
                     })
                 });
@@ -63,6 +64,7 @@ class chessPlugin {
                         if (row_index == last[0] && cloumn_index == last[1]) {
                             let chess = cloumn_item.childNodes[0];
                             chess.className = "";
+                            this.tips.innerHTML = "轮到黑棋下";
                         }
                     })
                 });
